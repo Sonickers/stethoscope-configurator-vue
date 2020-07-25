@@ -11,7 +11,8 @@
 <script>
 export default {
     props: {
-        colors: Array
+        colors: Array,
+        active: Object
     }
 }
 </script>

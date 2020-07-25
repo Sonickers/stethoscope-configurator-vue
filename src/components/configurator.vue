@@ -1,18 +1,13 @@
 <template>
-    <div class="container">
-        <div class="notification">
-            <header-title/>
-            <nav class="level">
-                <div class="level-left">
-                    <div class="level-item">
-                        <forms/>
-                    </div>
-                </div>
-
-                <div class="level-right">
-                    <result-product/>
-                </div>
-            </nav>
+    <div class="container has-background-light py-4 px-4">
+        <header-title/>
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <forms/>
+            </div>
+            <div class="column">
+                <result-product/>
+            </div>
         </div>
     </div>
 </template>
