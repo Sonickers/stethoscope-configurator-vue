@@ -20,22 +20,23 @@ export default {
     data() {
         return {
             brands: [
-                { id: 1, name: "Littmann" },
-                { id: 2, name: "Spirit Medical" },
-                { id: 3, name: "NaturFarm" },
-                { id: 4, name: "Luxamed" }
+                { id: 1, name: "Littmann", cost: 150 },
+                { id: 2, name: "Spirit Medical", cost: 130 },
+                { id: 3, name: "NaturFarm", cost: 95 },
+                { id: 4, name: "Luxamed", cost: 75 }
             ],
             models: [
-                { id: 1, name: "Intern" },
-                { id: 2, name: "Cardio" },
-                { id: 3, name: "Pediatric" },
-                { id: 4, name: "Anesthesia" }
+                { id: 1, name: "Intern", cost: 40 },
+                { id: 2, name: "Cardio", cost: 60 },
+                { id: 3, name: "Pediatric", cost: 30 },
+                { id: 4, name: "Anesthesia", cost: 25 }
             ],
             colors: [
-                { id: 1, name: "Deep Black", color: "is-black" },
-                { id: 2, name: "Raspberry Pink", color: "is-danger" },
-                { id: 3, name: "Sky Blue", color: "is-info" },
-                { id: 4, name: "Cactus Green", color: "is-success" }
+                { id: 1, name: "Summer Sun", color: "is-warning" },
+                { id: 2, name: "Neon Pink", color: "is-danger" },
+                { id: 3, name: "Blueberry Blue", color: "is-link" },
+                { id: 4, name: "Deep Black", color: "is-black" },
+                { id: 5, name: "Cactus Green", color: "is-success" }
             ]
         }
     }
