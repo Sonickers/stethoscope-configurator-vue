@@ -1,4 +1,8 @@
-# stethoscope-configurator
+# Stethoscope Configurator
+
+This is project bassed on previous version [link!]()
+Tech stack:
+* Vue 
 
 ## Project setup
 ```
@@ -19,7 +23,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# stethoscope-configurator-vue
