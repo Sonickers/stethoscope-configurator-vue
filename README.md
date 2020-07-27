@@ -7,4 +7,4 @@ This is project based on previous version (jQuery). [(old project link)](https:/
 Tech stack:
 * Vue 2.6.11
 * Bulma 0.9.0 
-* Netfily (production hosting)
+* Netlify (production hosting)
