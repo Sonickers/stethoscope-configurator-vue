@@ -38,11 +38,11 @@ export default {
         { id: 4, name: "Anesthesia", cost: 25 },
       ],
       colors: [
-        { id: 1, name: "Summer Sun", color: "is-warning" },
-        { id: 2, name: "Neon Pink", color: "is-danger" },
-        { id: 3, name: "Blueberry Blue", color: "is-link" },
-        { id: 4, name: "Deep Black", color: "is-black" },
-        { id: 5, name: "Cactus Green", color: "is-success" },
+        { id: 1, name: "Summer Sun", color: "is-warning", img: "yellow.jpeg" },
+        { id: 2, name: "Neon Pink", color: "is-danger", img: "pink.jpg" },
+        { id: 3, name: "Blueberry Blue", color: "is-link", img: "blue.jpg" },
+        { id: 4, name: "Deep Black", color: "is-black", img: "black.jpg" },
+        { id: 5, name: "Cactus Green", color: "is-success", img: "green.jpg" },
       ],
     };
   },

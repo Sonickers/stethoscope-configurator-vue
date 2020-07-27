@@ -6,7 +6,7 @@
         <forms v-model="form" />
       </div>
       <div class="column">
-        <result-product />
+        <result-product :form="form" />
       </div>
     </div>
   </div>
