@@ -3,12 +3,15 @@
     <h2 class="pb-2">Color</h2>
     <div class="control">
       <button
-        class="button mr-3 is-rounded"
+        class="button mr-3 is-rounded is-primary"
         :class="getColorClasses(color)"
         v-for="color in colors"
         :key="color.id"
         @click="$emit('selected', color)"
-      >{{ color.name }}</button>
+      >
+        <span class="square-color" :style="{'background-color': color.hex}"></span>
+        {{ color.name }}
+      </button>
       <hr />
     </div>
   </div>
@@ -25,9 +28,18 @@ export default {
       return {
         "is-active": this.active && this.active.id == color.id,
         "is-outlined": !this.active || this.active.id != color.id,
-        [color.color]: true,
       };
     },
   },
 };
 </script>
+
+<style scoped>
+.square-color {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+</style>
