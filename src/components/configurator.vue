@@ -7,6 +7,7 @@
       </div>
       <div class="column">
         <result-product :form="form" />
+        <action-buttons/>
       </div>
     </div>
   </div>
@@ -16,12 +17,14 @@
 import headerTitle from "./header-title";
 import forms from "./forms";
 import resultProduct from "./result-product";
+import actionButtons from './action-buttons'
 
 export default {
   components: {
     headerTitle,
     forms,
     resultProduct,
+    actionButtons
   },
   data() {
     return {
