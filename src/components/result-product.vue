@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     image() {
-      if (!this.form || !this.form.color) return "";
+      if (!this.form || !this.form.color) return require(`@/assets/images/no-image.png`);
       return require(`@/assets/images/${this.form.color.img}`);
     },
     modelName() {
