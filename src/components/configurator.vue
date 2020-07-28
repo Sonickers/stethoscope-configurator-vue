@@ -1,8 +1,8 @@
 <template>
   <div class="container has-background-light py-4 px-4">
-    <header-title />
     <div class="columns">
       <div class="column is-two-thirds">
+        <header-title />
         <forms v-model="form" />
       </div>
       <div class="column">
