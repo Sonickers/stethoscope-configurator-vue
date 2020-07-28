@@ -2,30 +2,36 @@
   <div class="card">
     <div class="card-image"></div>
     <div class="card-content">
-      <div class="media">
-        <div class="media-content">
-          <img v-if="image" :src="image" />
-        </div>
-      </div>
-
       <div class="content">
-        <p class="subtitle has-text-primary has-text-centered">Summary</p>
+        <p class="title has-text-primary has-text-centered pt-5">Summary</p>
+        <div class="media">
+          <div class="media-content">
+            <figure class="image is-4by3">
+              <img v-if="image" :src="image" />
+            </figure>
+          </div>
+        </div>
+        <div class="columns">
+          <p class="column has-text-left">Brand</p>
+          <p class="column has-text-right has-text-weight-bold">{{ brandName }}</p>
+        </div>
         <div class="columns">
           <p class="column has-text-left">Model</p>
-          <p class="column has-text-right">Littmann</p>
+          <p class="column has-text-right has-text-weight-bold">{{ modelName }}</p>
         </div>
-        <p>Brand:</p>
-        <p class="has-text-right has-text-weight-bold">Cardio</p>
-        <p>Color:</p>
-        <p class="has-text-right has-text-weight-bold">Deep Black</p>
-        <p>Cost:</p>
-        <p class="has-text-right has-text-weight-bold">$ 350</p>
-        <br />
+        <div class="columns">
+          <p class="column has-text-left">Color</p>
+          <p class="column has-text-right has-text-weight-bold">{{ colorName }}</p>
+        </div>
+        <div class="columns">
+          <p class="column has-text-left">Cost</p>
+          <p class="column has-text-right has-text-weight-bold">{{ cost }}</p>
+        </div>
         <!-- Add delivery time to every color value -->
-        <p>Delivery:</p>
+        <!-- <p>Delivery:</p>
         <p class="has-text-right has-text-weight-bold">
           <time datetime="2016-1-1">1 Jan 2016</time>
-        </p>
+        </p>-->
       </div>
     </div>
   </div>
@@ -44,6 +50,28 @@ export default {
       if (!this.form || !this.form.color) return "";
       return require(`@/assets/images/${this.form.color.img}`);
     },
+    modelName() {
+      if (!this.form.model) {
+        return '-'
+      }
+      return this.form.model.name
+    },
+    brandName() {
+      if (!this.form.brand) {
+        return '-'
+      }
+      return this.form.brand.name
+    },
+    colorName() {
+      if (!this.form.color) {
+        return '-'
+      }
+      return this.form.color.name
+    },
+    cost () {
+      const sum = (this.form.model?.cost ?? 0) + (this.form.brand?.cost ?? 0)
+      return sum + ' $'
+    }
   },
 };
 </script>
