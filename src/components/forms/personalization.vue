@@ -4,10 +4,16 @@
     <div class="control">
       <div class="field">
         <div class="control">
-          <input class="input is-primary is-rounded" type="text" placeholder="Primary input" />
+          <input class="input is-primary is-rounded input-personalization" type="text" placeholder="Primary input" />
         </div>
       </div>
       <hr />
     </div>
   </div>
 </template>
+
+<style scoped>
+  .input-personalization {
+    width: 250px;
+  }
+</style>
