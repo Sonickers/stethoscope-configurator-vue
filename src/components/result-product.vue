@@ -27,11 +27,6 @@
           <p class="column has-text-left">Cost</p>
           <p class="column has-text-right has-text-weight-bold">{{ cost }}</p>
         </div>
-        <!-- Add delivery time to every color value -->
-        <!-- <p>Delivery:</p>
-        <p class="has-text-right has-text-weight-bold">
-          <time datetime="2016-1-1">1 Jan 2016</time>
-        </p>-->
       </div>
     </div>
   </div>
@@ -47,31 +42,32 @@ export default {
   },
   computed: {
     image() {
-      if (!this.form || !this.form.color) return require(`@/assets/images/no-image.png`);
+      if (!this.form || !this.form.color)
+        return require(`@/assets/images/no-image.png`);
       return require(`@/assets/images/${this.form.color.img}`);
     },
     modelName() {
       if (!this.form.model) {
-        return '-'
+        return "-";
       }
-      return this.form.model.name
+      return this.form.model.name;
     },
     brandName() {
       if (!this.form.brand) {
-        return '-'
+        return "-";
       }
-      return this.form.brand.name
+      return this.form.brand.name;
     },
     colorName() {
       if (!this.form.color) {
-        return '-'
+        return "-";
       }
-      return this.form.color.name
+      return this.form.color.name;
     },
-    cost () {
-      const sum = (this.form.model?.cost ?? 0) + (this.form.brand?.cost ?? 0)
-      return sum + ' $'
-    }
+    cost() {
+      const sum = (this.form.model?.cost ?? 0) + (this.form.brand?.cost ?? 0);
+      return sum + " $";
+    },
   },
 };
 </script>
