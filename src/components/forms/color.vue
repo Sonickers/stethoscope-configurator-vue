@@ -3,7 +3,7 @@
     <h2 class="pb-2">Color</h2>
     <div class="control">
       <button
-        class="button mr-3 is-rounded is-primary"
+        class="button mr-3 is-primary"
         :class="getColorClasses(color)"
         v-for="color in colors"
         :key="color.id"
@@ -12,7 +12,6 @@
         <span class="square-color" :style="{'background-color': color.hex}"></span>
         {{ color.name }}
       </button>
-      <hr />
     </div>
   </div>
 </template>
